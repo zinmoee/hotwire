@@ -1,0 +1,10 @@
+%h1 This is home
+%div= link_to "go to other page", other_index_path
+
+= turbo_frame_tag 'anyframe' do
+  %div
+    %h2 Home view
+    = form_with scope: :any, url: turbo_frame_submit_path, local: true do |form|
+      = form.label :anynumber, 'Type an integer (odd or even)', class: 'my-0 d-inline'
+      = form.text_field :anynumber, type: 'number', required: true, value: "#{local_assigns[:anynumber] || 0}", aria_describedby: 'anynumber'
+      = form.submit 'Submit this number', id: 'submit'
