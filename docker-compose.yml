@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  hotwire:
+    image: hotwire:latest
+
+    expose:
+      - "3000"
+      - "3443"
+
+    ports:
+      - "3000:3000"
+      - "3443:3443"
+
+    environment: &hotwire
+      - RACK_ENV=development
+      - DOCKERED=true
+      - MYSQL_HOST=host.docker.internal

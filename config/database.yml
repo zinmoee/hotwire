@@ -15,6 +15,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: croucher
   password: Croucher123@
+  host: <%= ENV['MYSQL_HOST'] %>
 
 development:
   <<: *default
@@ -50,5 +51,3 @@ test:
 production:
   <<: *default
   database: hotwire_production
-  username: hotwire
-  password: <%= ENV["HOTWIRE_DATABASE_PASSWORD"] %>

@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Docker
 
-Things you may want to cover:
+* docker build --platform linux/amd64 -f Dockerfile -t hotwire .
 
-* Ruby version
+* docker-compose -f docker-compose.yml up --build
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+:tada: :fireworks:
