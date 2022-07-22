@@ -49,8 +49,16 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger', '>= 0.1.1'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano-figaro-yml', '~> 1.0.2'
 end
 
 gem "hotwire-rails", "~> 0.1.3"
 
 gem "importmap-rails", "~> 1.1"
+
+gem 'figaro'

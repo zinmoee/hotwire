@@ -13,13 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: croucher
-  password: Croucher123@
   host: <%= ENV['MYSQL_HOST'] %>
 
 development:
   <<: *default
   database: hotwire_development
+  username: croucher
+  password: Croucher123@
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,6 +27,8 @@ development:
 test:
   <<: *default
   database: hotwire_test
+  username: croucher
+  password: Croucher123@
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -51,3 +53,5 @@ test:
 production:
   <<: *default
   database: hotwire_production
+  username: root
+  password: Croucher123@
